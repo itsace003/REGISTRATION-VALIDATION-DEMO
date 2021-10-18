@@ -1,0 +1,84 @@
+<html>
+<head>
+	<title>Registration Form</title>
+	<link rel="stylesheet" type="text/css" href="assets/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+</head>
+<body>
+		
+	<script 
+		src = "validate.js">
+	</script>
+	
+	<div class= "header">
+		<a href="index.html"><h1><u>Registration Form</u></h1></a>
+	</div>
+
+	<form name="myForm" action="register.html" onsubmit="return validate()">
+		<h3>USER INFORMATION</h3>
+		<center><div class = "user_info">
+			<div>FIRST NAME :
+				<input  name = "first" type = "text" placeholder = "First Name" id ="fname" onchange = "frstname(fname)" >
+				<span id = "f_name_error"></span>
+			</div>
+			<div>LAST NAME :
+				<input name = "last" type = "text" placeholder = "Last Name"  id = "lname" onchange = "lstname(lname)" >
+				<span id = "l_name_error"></span>
+			</div>				
+			<div>GENDER : 
+				<select id = "gender" name  = "gender" id = "gender" onchange = "gndr(gender)">
+					<option value="" disabled selected>SELECT YOUR OPTION</option>
+					<option value = "MALE">MALE</option>
+					<option value = "FEMALE">FEMALE</option>
+				</select>
+				<span id = "gender_error"></span>
+			</div>
+			<div>BIRTH DATE : 
+				<input  name = "Date" type = "text" placeholder= "Enter DOB" id = "dob" onchange = "d_o_b(dob)">
+				<span id = "dob_error"></span>
+			</div>
+		</div></center>
+
+
+		<h3>LOGIN INFORMATION</h3>
+		<center><div class = "login_info"> 
+				<div>
+					EMAIL-ID : 
+					<input name = "email" type = "text" placeholder= "Enter Email" id = "email" onchange = "i_d(email)">
+					<span id = "id_error"></span>
+				</div>
+				<div>
+					PASSWORD:
+					<input name = "password" type = "password" placeholder="Password" id = "pwd1" onchange = "p_w_d(pwd1,pwd2)">
+					RE-ENTER PASSWORD:
+					<input name = "password_2" type = "password" placeholder= "Re-Enter Password"  id = "pwd2" onchange = "p_w_d(pwd1,pwd2)">
+					<span id = "pwd_error"></span>
+				</div>
+		</div></center>
+
+
+		<center>
+		
+			<div class = "button">
+				<input type="submit" id="register" value= "REGISTER NOW!">
+			</div>
+
+		</center>
+		
+		</form>
+		
+		<form>
+		
+		<center>
+		
+			<div class = "button">
+				<button value="cancel" formaction = "index.html" >CANCEL</button>
+			</div>
+
+		</center>
+		
+		</form>
+
+</body>
+
+</html>
